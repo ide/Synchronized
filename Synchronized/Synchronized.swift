@@ -20,12 +20,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@import Foundation;
+import Foundation
 
-//! Project version number for Synchronized.
-FOUNDATION_EXPORT double SynchronizedVersionNumber;
+private let UninitializedResult = NSObject()
 
-//! Project version string for Synchronized.
-FOUNDATION_EXPORT const unsigned char SynchronizedVersionString[];
+public func synchronized<T>(object: AnyObject, closure: () -> T) -> T {
+    var result: Any? = UninitializedResult
+    objc_synchronized(object) {
+        result = closure()
+    }
+    return result as T
+}
 
-#import <Synchronized/ObjCSynchronized.h>
+public func synchronized(object: AnyObject, closure: () -> Void) {
+    objc_synchronized(object) {
+        closure()
+    }
+}

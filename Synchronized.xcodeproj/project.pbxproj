@@ -9,7 +9,20 @@
 /* Begin PBXBuildFile section */
 		78C901E419C8BFDA0042C514 /* Synchronized.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C901E319C8BFDA0042C514 /* Synchronized.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78C901EE19C8BFDA0042C514 /* SynchronizedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C901ED19C8BFDA0042C514 /* SynchronizedTests.swift */; };
+		78C901F819C8C05F0042C514 /* Synchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C901F719C8C05F0042C514 /* Synchronized.swift */; };
+		78C901FA19C8C0E40042C514 /* ObjCSynchronized.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C901F919C8C0E40042C514 /* ObjCSynchronized.m */; };
+		78C901FE19C8C1FD0042C514 /* ObjCSynchronized.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C901FD19C8C1FD0042C514 /* ObjCSynchronized.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78C901FF19C8C7090042C514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C901D519C8BFDA0042C514 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78C901DD19C8BFDA0042C514;
+			remoteInfo = Synchronized;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		78C901DE19C8BFDA0042C514 /* Synchronized.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Synchronized.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +31,9 @@
 		78C901E919C8BFDA0042C514 /* SynchronizedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynchronizedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C901EC19C8BFDA0042C514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78C901ED19C8BFDA0042C514 /* SynchronizedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizedTests.swift; sourceTree = "<group>"; };
+		78C901F719C8C05F0042C514 /* Synchronized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synchronized.swift; sourceTree = "<group>"; };
+		78C901F919C8C0E40042C514 /* ObjCSynchronized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCSynchronized.m; sourceTree = "<group>"; };
+		78C901FD19C8C1FD0042C514 /* ObjCSynchronized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCSynchronized.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,9 +57,9 @@
 		78C901D419C8BFDA0042C514 = {
 			isa = PBXGroup;
 			children = (
+				78C901DF19C8BFDA0042C514 /* Products */,
 				78C901E019C8BFDA0042C514 /* Synchronized */,
 				78C901EA19C8BFDA0042C514 /* SynchronizedTests */,
-				78C901DF19C8BFDA0042C514 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +75,11 @@
 		78C901E019C8BFDA0042C514 /* Synchronized */ = {
 			isa = PBXGroup;
 			children = (
-				78C901E319C8BFDA0042C514 /* Synchronized.h */,
 				78C901E119C8BFDA0042C514 /* Supporting Files */,
+				78C901FD19C8C1FD0042C514 /* ObjCSynchronized.h */,
+				78C901F919C8C0E40042C514 /* ObjCSynchronized.m */,
+				78C901E319C8BFDA0042C514 /* Synchronized.h */,
+				78C901F719C8C05F0042C514 /* Synchronized.swift */,
 			);
 			path = Synchronized;
 			sourceTree = "<group>";
@@ -76,8 +95,8 @@
 		78C901EA19C8BFDA0042C514 /* SynchronizedTests */ = {
 			isa = PBXGroup;
 			children = (
-				78C901ED19C8BFDA0042C514 /* SynchronizedTests.swift */,
 				78C901EB19C8BFDA0042C514 /* Supporting Files */,
+				78C901ED19C8BFDA0042C514 /* SynchronizedTests.swift */,
 			);
 			path = SynchronizedTests;
 			sourceTree = "<group>";
@@ -97,6 +116,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C901FE19C8C1FD0042C514 /* ObjCSynchronized.h in Headers */,
 				78C901E419C8BFDA0042C514 /* Synchronized.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +153,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				78C9020019C8C7090042C514 /* PBXTargetDependency */,
 			);
 			name = SynchronizedTests;
 			productName = SynchronizedTests;
@@ -196,6 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C901FA19C8C0E40042C514 /* ObjCSynchronized.m in Sources */,
+				78C901F819C8C05F0042C514 /* Synchronized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +231,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78C9020019C8C7090042C514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78C901DD19C8BFDA0042C514 /* Synchronized */;
+			targetProxy = 78C901FF19C8C7090042C514 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		78C901EF19C8BFDA0042C514 /* Debug */ = {
@@ -298,6 +329,7 @@
 		78C901F219C8BFDA0042C514 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -307,12 +339,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		78C901F319C8BFDA0042C514 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -374,6 +408,7 @@
 				78C901F319C8BFDA0042C514 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78C901F419C8BFDA0042C514 /* Build configuration list for PBXNativeTarget "SynchronizedTests" */ = {
 			isa = XCConfigurationList;
@@ -382,6 +417,7 @@
 				78C901F619C8BFDA0042C514 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

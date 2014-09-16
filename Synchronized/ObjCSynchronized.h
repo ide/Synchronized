@@ -20,12 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@import Foundation;
-
-//! Project version number for Synchronized.
-FOUNDATION_EXPORT double SynchronizedVersionNumber;
-
-//! Project version string for Synchronized.
-FOUNDATION_EXPORT const unsigned char SynchronizedVersionString[];
-
-#import <Synchronized/ObjCSynchronized.h>
+void objc_synchronized(id object, void (^closure)());
