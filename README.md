@@ -6,7 +6,7 @@ Exposes Objective-C's @synchronized directive to Swift
 Linking the Framework
 ---
 
-Drag Synchronized.framework into the Frameworks group of your open Xcode project. Xcode gives you the option to copy the framework, which you should probably do unless you have a different way of managing frameworks. Then click on your project file and select the General tab. Go to Embedded Binaries and add Synchronized.framework.
+Drag Synchronized.xcodeproj into the Frameworks group of your open Xcode project. Xcode gives you the option to copy the framework, which you can do unless you have a different way of managing frameworks. Then click on your project file and select the Build Phases tab. Add Synchronized.framework to Target Dependencies and also to Link Binary With Libraries.
 
 Once the framework is linked this Swift code should compile:
 ```swift

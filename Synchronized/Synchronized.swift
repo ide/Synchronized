@@ -20,12 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
-
-private let UninitializedResult = NSObject()
-
 public func synchronized<T>(object: AnyObject, closure: () -> T) -> T {
-    var result: Any? = UninitializedResult
+    var result: Any? = nil
     objc_synchronized(object) {
         result = closure()
     }
