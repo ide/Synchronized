@@ -1,0 +1,10 @@
+framework module Synchronized {
+  umbrella header "Synchronized.h"
+
+  export *
+  module * { export * }
+}
+
+module Synchronized.Swift {
+    header "Synchronized-Swift.h"
+}

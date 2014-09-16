@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>69A3A745-40D8-4D05-979D-94EAA8B0107B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Synchronized</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C4B28623BC71688399A46D5D7A7AF1E003D96E4A</key>
+		<string>github.com:ide/Synchronized.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Synchronized.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C4B28623BC71688399A46D5D7A7AF1E003D96E4A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ide/Synchronized.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C4B28623BC71688399A46D5D7A7AF1E003D96E4A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C4B28623BC71688399A46D5D7A7AF1E003D96E4A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Synchronized</string>
+		</dict>
+	</array>
+</dict>
+</plist>
