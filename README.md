@@ -5,22 +5,27 @@ Exposes Objective-C's @synchronized directive to Swift
 
 Public API
 ----------
-`public func synchronized<T>(object: AnyObject, closure: () -> T) -> T`
+
+```swift
+public func synchronized(object: AnyObject, closure: () -> Void)
+```
 
 **Usage:**
-```
-let value = synchronized(threadUnsafeDictionary) {
-  threadUnsafeDictionary[key]
+```swift
+synchronized(mutexObject) {
+  // Code to run in your critical section
 }
 ```
 
 ---
 
-`public func synchronized(object: AnyObject, closure: () -> Void)`
+```swift
+public func synchronized<T>(object: AnyObject, closure: () -> T) -> T
+```
 
 **Usage:**
-```
-synchronized(mutexObject) {
-  // Code to run in your critical section
+```swift
+let value = synchronized(threadUnsafeDictionary) {
+  threadUnsafeDictionary[key]
 }
 ```
