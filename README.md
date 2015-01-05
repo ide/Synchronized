@@ -1,12 +1,18 @@
 Synchronized
 ============
 
+[![Version](https://img.shields.io/cocoapods/v/Synchronized.svg?style=flat)](http://cocoadocs.org/docsets/Synchronized)
+[![License](https://img.shields.io/cocoapods/l/Synchronized.svg?style=flat)](http://cocoadocs.org/docsets/Synchronized)
+[![Platform](https://img.shields.io/cocoapods/p/Synchronized.svg?style=flat)](http://cocoadocs.org/docsets/Synchronized)
+
 Exposes Objective-C's @synchronized directive to Swift
 
 Linking the Framework
 ---
 
-Drag Synchronized.xcodeproj into the Frameworks group of your open Xcode project. Xcode gives you the option to copy the framework, which you can do unless you have a different way of managing frameworks. Then click on your project file and select the Build Phases tab. Add Synchronized.framework to Target Dependencies and also to Link Binary With Libraries.
+Synchronized is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+
+    pod "Synchronized"
 
 Once the framework is linked this Swift code should compile:
 ```swift
