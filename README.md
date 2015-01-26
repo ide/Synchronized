@@ -47,3 +47,26 @@ let value = synchronized(threadUnsafeDictionary) {
   threadUnsafeDictionary[key]
 }
 ```
+
+Differences from `@synchronized`
+---
+
+Objective-C's `@synchronized` is a language-level directive and does not introduce a new function scope. This means that `return` statements cause the program to return from the surrounding function that contains the `@synchronized` directive. In contrast, Synchronized uses closures which do introduce a function scope. Returning from a closure passed to `synchronized` exits only the closure, not the surrounding function.
+
+```objc
+- (void)returnDifferenceExample
+{
+    @synchronized {
+        return;
+    }
+    NSLog(@"This line of code does not run.");
+}
+```
+```swift
+func returnDifferenceExample() {
+    synchronized {
+        return
+    }
+    println("This line of code does run.")
+}
+```
