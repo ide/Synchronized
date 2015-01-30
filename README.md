@@ -5,7 +5,7 @@ Synchronized
 [![License](https://img.shields.io/cocoapods/l/Synchronized.svg?style=flat)](http://cocoadocs.org/docsets/Synchronized)
 [![Platform](https://img.shields.io/cocoapods/p/Synchronized.svg?style=flat)](http://cocoadocs.org/docsets/Synchronized)
 
-Exposes Objective-C's @synchronized directive to Swift
+Exposes Objective-C's @synchronized directive to Swift. Like the Objective-C directive, Synchronized acquires a mutex lock, runs some code, and releases the lock when the code completes or throws an exception.
 
 Linking the Framework
 ---
@@ -51,7 +51,7 @@ let value = synchronized(threadUnsafeDictionary) {
 Differences from `@synchronized`
 ---
 
-Objective-C's `@synchronized` is a language-level directive and does not introduce a new function scope. This means that `return` statements cause the program to return from the surrounding function that contains the `@synchronized` directive. In contrast, Synchronized uses closures which do introduce a function scope. Returning from a closure passed to `synchronized` exits only the closure, not the surrounding function.
+Objective-C's `@synchronized` is a language-level directive and does not introduce a new function scope. This means that `return` statements cause the program to return from the surrounding function that contains the `@synchronized` directive.
 
 ```objc
 - (void)returnDifferenceExample
@@ -62,6 +62,9 @@ Objective-C's `@synchronized` is a language-level directive and does not introdu
     NSLog(@"This line of code does not run.");
 }
 ```
+
+In contrast, Synchronized uses closures which do introduce a function scope. Returning from a closure passed to `synchronized` exits only the closure, not the surrounding function.
+
 ```swift
 func returnDifferenceExample() {
     synchronized {
