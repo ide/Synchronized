@@ -25,7 +25,7 @@ public func synchronized<T>(object: AnyObject, closure: () -> T) -> T {
     objc_synchronized(object) {
         result = closure()
     }
-    return result as T
+    return result as! T
 }
 
 public func synchronized(object: AnyObject, closure: () -> Void) {
