@@ -20,4 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-void objc_synchronized(id object, void (^closure)());
+void objc_synchronized(id object, __attribute__((noescape)) void (^closure)());

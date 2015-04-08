@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-public func synchronized<T>(object: AnyObject, closure: () -> T) -> T {
+public func synchronized<T>(object: AnyObject, @noescape closure: () -> T) -> T {
     var result: Any? = nil
     objc_synchronized(object) {
         result = closure()
@@ -28,6 +28,6 @@ public func synchronized<T>(object: AnyObject, closure: () -> T) -> T {
     return result as! T
 }
 
-public func synchronized(object: AnyObject, closure: () -> Void) {
+public func synchronized(object: AnyObject, @noescape closure: () -> Void) {
     objc_synchronized(object, closure)
 }

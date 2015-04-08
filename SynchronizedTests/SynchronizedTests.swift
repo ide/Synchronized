@@ -129,8 +129,8 @@ class SynchronizedTests: XCTestCase {
             }
         }
 
-        waitForExpectationsWithTimeout(1) { (possibleError: NSError?) in
-            if let error = possibleError? {
+        waitForExpectationsWithTimeout(1) { error in
+            if let error = error {
                 XCTFail(error.localizedDescription)
             }
         }
