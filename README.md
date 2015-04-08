@@ -73,3 +73,5 @@ func returnDifferenceExample() {
     println("This line of code does run.")
 }
 ```
+
+Synchronized's closures are annotated with the `@noclosure` attribute, which removes the need to access instance variables with `self.`, so it is similar to Objective-C's `@synchronized` directive in this regard.
