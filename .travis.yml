@@ -3,6 +3,13 @@ osx_image: beta-xcode6.3
 xcode_project: Synchronized.xcodeproj
 xcode_scheme: SynchronizedTests
 xcode_sdk: iphonesimulator8.3
+
+before_install:
+  - brew update
+
+install:
+  - brew reinstall xctool
+
 email:
   on_success: change
   on_failure: change
