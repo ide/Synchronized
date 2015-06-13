@@ -20,4 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
+
 void objc_synchronized(id object, __attribute__((noescape)) void (^closure)());
+
+NS_ASSUME_NONNULL_END
