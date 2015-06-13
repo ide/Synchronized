@@ -21,11 +21,11 @@
 // THE SOFTWARE.
 
 public func synchronized<T>(object: AnyObject, @noescape closure: () -> T) -> T {
-    var result: Any? = nil
+    var result: T? = nil
     objc_synchronized(object) {
         result = closure()
     }
-    return result as! T
+    return result!
 }
 
 public func synchronized(object: AnyObject, @noescape closure: () -> Void) {

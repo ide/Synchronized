@@ -78,8 +78,8 @@
 				78C901E119C8BFDA0042C514 /* Supporting Files */,
 				78C901FD19C8C1FD0042C514 /* ObjCSynchronized.h */,
 				78C901F919C8C0E40042C514 /* ObjCSynchronized.m */,
-				78C901E319C8BFDA0042C514 /* Synchronized.h */,
 				78C901F719C8C05F0042C514 /* Synchronized.swift */,
+				78C901E319C8BFDA0042C514 /* Synchronized.h */,
 			);
 			path = Synchronized;
 			sourceTree = "<group>";
