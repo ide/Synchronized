@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78C901E819C8BFDA0042C514"
-               BuildableName = "SynchronizedTests.xctest"
-               BlueprintName = "SynchronizedTests"
+               BlueprintIdentifier = "78C901DD19C8BFDA0042C514"
+               BuildableName = "Synchronized.framework"
+               BlueprintName = "Synchronized"
                ReferencedContainer = "container:Synchronized.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78C901E819C8BFDA0042C514"
-               BuildableName = "SynchronizedTests.xctest"
-               BlueprintName = "SynchronizedTests"
-               ReferencedContainer = "container:Synchronized.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78C901E819C8BFDA0042C514"
-            BuildableName = "SynchronizedTests.xctest"
-            BlueprintName = "SynchronizedTests"
-            ReferencedContainer = "container:Synchronized.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78C901E819C8BFDA0042C514"
-            BuildableName = "SynchronizedTests.xctest"
-            BlueprintName = "SynchronizedTests"
+            BlueprintIdentifier = "78C901DD19C8BFDA0042C514"
+            BuildableName = "Synchronized.framework"
+            BlueprintName = "Synchronized"
             ReferencedContainer = "container:Synchronized.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78C901E819C8BFDA0042C514"
-            BuildableName = "SynchronizedTests.xctest"
-            BlueprintName = "SynchronizedTests"
+            BlueprintIdentifier = "78C901DD19C8BFDA0042C514"
+            BuildableName = "Synchronized.framework"
+            BlueprintName = "Synchronized"
             ReferencedContainer = "container:Synchronized.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
