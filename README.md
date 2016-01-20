@@ -12,7 +12,11 @@ Linking the Framework
 
 Synchronized is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
-    pod "Synchronized"
+    pod "Synchronized", "~> 2.0"
+    
+You can also use [Carthage](https://github.com/Carthage/Carthage) to fetch it from GitHub:
+
+    github "ide/Synchronized" ~> 2.0
 
 Once the framework is linked this Swift code should compile:
 ```swift
