@@ -1,4 +1,4 @@
-Synchronized [![Build Status](https://travis-ci.org/ide/Synchronized.svg?branch=master)](https://travis-ci.org/ide/Synchronized)
+Synchronized [![Circle CI](https://circleci.com/gh/ide/Synchronized.svg?style=svg)](https://circleci.com/gh/ide/Synchronized) [![Build Status](https://travis-ci.org/ide/Synchronized.svg?branch=master)](https://travis-ci.org/ide/Synchronized)
 ============
 
 [![Version](https://img.shields.io/cocoapods/v/Synchronized.svg?style=flat)](http://cocoadocs.org/docsets/Synchronized)
