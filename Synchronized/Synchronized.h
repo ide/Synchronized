@@ -28,4 +28,4 @@ FOUNDATION_EXPORT double SynchronizedVersionNumber;
 //! Project version string for Synchronized.
 FOUNDATION_EXPORT const unsigned char SynchronizedVersionString[];
 
-#import <Synchronized/ObjCSynchronized.h>
+#import "ObjCSynchronized.h"

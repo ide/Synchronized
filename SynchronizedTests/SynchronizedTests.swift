@@ -69,13 +69,13 @@ class SynchronizedTests: XCTestCase {
         let mutexA = NSObject()
         let mutexB = NSObject()
 
-        let expectationA1 = expectationWithDescription("Finished operation 1 with mutex A")
-        let expectationA2 = expectationWithDescription("Finished operation 2 with mutex A")
-        let expectationB1 = expectationWithDescription("Finished operation 1 with mutex B")
+        let expectationA1 = expectation(description: "Finished operation 1 with mutex A")
+        let expectationA2 = expectation(description: "Finished operation 2 with mutex A")
+        let expectationB1 = expectation(description: "Finished operation 1 with mutex B")
 
-        let concurrentQueue = dispatch_queue_create("SynchronizedTests.testMutualExclusion", DISPATCH_QUEUE_CONCURRENT)
+        let concurrentQueue = DispatchQueue(label: "SynchronizedTests.testMutualExclusion", attributes: DispatchQueue.Attributes.concurrent)
 
-        dispatch_async(concurrentQueue) {
+        concurrentQueue.async {
             synchronized(mutexA) {
                 var operationA1DidFinish = false
                 var operationA2DidFinish = false
@@ -85,7 +85,7 @@ class SynchronizedTests: XCTestCase {
                 let a2ActiveCondition = NSCondition()
                 a2ActiveCondition.lock()
 
-                dispatch_async(concurrentQueue) {
+                concurrentQueue.async {
                     a2ActiveCondition.lock()
                     a2ActiveCondition.signal()
                     a2ActiveCondition.unlock()
@@ -105,7 +105,7 @@ class SynchronizedTests: XCTestCase {
                 let b1ActiveCondition = NSCondition()
                 b1ActiveCondition.lock()
 
-                dispatch_async(concurrentQueue) {
+                concurrentQueue.async {
                     b1ActiveCondition.lock()
                     b1ActiveCondition.signal()
                     b1ActiveCondition.unlock()
@@ -119,7 +119,7 @@ class SynchronizedTests: XCTestCase {
                 b1ActiveCondition.wait()
                 b1ActiveCondition.unlock()
 
-                NSThread.sleepForTimeInterval(0.2)
+                Thread.sleep(forTimeInterval: 0.2)
 
                 XCTAssert(!operationA2DidFinish, "Operation A2 did not wait for A1")
                 XCTAssert(operationB1DidFinish, "Operation B1 did not finish before A1")
@@ -129,7 +129,7 @@ class SynchronizedTests: XCTestCase {
             }
         }
 
-        waitForExpectationsWithTimeout(1) { error in
+        waitForExpectations(timeout: 1) { error in
             if let error = error {
                 XCTFail(error.localizedDescription)
             }

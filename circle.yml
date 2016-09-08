@@ -3,4 +3,4 @@ machine:
     XCODE_PROJECT: Synchronized.xcodeproj
     XCODE_SCHEME: SynchronizedTests
   xcode:
-    version: 7.2
+    version: 8.0
