@@ -22,7 +22,7 @@
 
 #import "ObjCSynchronized.h"
 
-void objc_synchronized(id object, void (^closure)())
+void objc_synchronized(id object, void (^closure)(void))
 {
     @synchronized(object) {
         closure();

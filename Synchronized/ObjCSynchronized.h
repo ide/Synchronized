@@ -24,6 +24,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-void objc_synchronized(id object, __attribute__((noescape)) void (^closure)());
+void objc_synchronized(id object, __attribute__((noescape)) void (^closure)(void));
 
 NS_ASSUME_NONNULL_END
