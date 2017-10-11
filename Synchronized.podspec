@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Synchronized"
-  s.version          = "3.0.0"
+  s.version          = "4.0.0"
   s.summary          = "Exposes Objective-C's @synchronized directive to Swift"
   s.description      = <<-DESC
                        A simple way to use Objective-C's `@synchronized`
