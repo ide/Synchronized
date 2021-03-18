@@ -1,0 +1,22 @@
+name: Tests
+
+on: push
+
+jobs:
+  tests:
+    name: Run iOS tests
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Run unit tests
+        run: >
+          xcodebuild
+          -project Synchronized.xcodeproj
+          -scheme SynchronizedTests
+          -sdk iphonesimulator
+          -destination "platform=iOS Simulator,name=iPhone 12"
+          -quiet
+          ONLY_ACTIVE_ARCH=NO
+          test
